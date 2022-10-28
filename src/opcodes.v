@@ -3,9 +3,11 @@
 // U - AUIPC   0010111
 // J - JAL     1101111
 
-`define LUI       7'b 0110111
-`define AUIPC     7'b 0010111
-`define JAL       7'b 1101111
+`define LUI       7'b0110111
+`define AUIPC     7'b0010111
+`define JAL       7'b1101111
+`define JAL_R     7'b1100111
+
 // B type
 //       f    op
 
@@ -32,7 +34,6 @@
       `define IF_LBU  3'b100     //LBU  100  0000011 
       `define IF_LHU  3'b101     //LHU  101  0000011 
 
-`define JUMP_R 7'b1100111
 
 `define OP_IM  7'b0010011
       `define OPF_ADDI  3'b000  //ADDI  000  0010011

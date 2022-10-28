@@ -20,6 +20,16 @@ assign ar2D = instructionD[24:20];
         .r2do    (r2D) );
 
 
+always @ *
+begin
+    imm20_r     = {instructionD[31:12], 12'b0};
+    imm12_r     = {{20{instructionD[31]}}, instructionD[31:20]};
+    bimm_r      = {{19{opcode_opcode_i[31]}}, instructionD[31], instructionD[7], instructionD[30:25], instructionD[11:8], 1'b0};
+    jimm20_r    = {{12{instructionD[31]}}, instructionD[19:12], instructionD[20], instructionD[30:25], instructionD[24:21], 1'b0};
+    shamt_r     = instructionD[24:20];
+end
+
+
 // increment pc only when instruction is valid
 always@(posedge clk) begin
     if(rst ==1'b1) begin

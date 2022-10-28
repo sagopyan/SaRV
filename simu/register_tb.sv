@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module main;
+module reg_tb;
 
   reg clk, reset;
     reg[4:0] ar1,ar2,ar3;
@@ -51,7 +51,7 @@ module main;
      #40
     for(integer i=0;i<32;i++) begin
         ar1<=ar1+1'b1;
-        //ar2<=ar2+2'd2;
+        ar2<=ar2+2'd2;
         #20;
 
      end
