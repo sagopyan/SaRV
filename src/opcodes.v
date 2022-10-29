@@ -45,7 +45,7 @@
 
 //R type
 //        f7    f3    op  
-`define SHIFT 7'b0010011
+//`define SHIFT 7'b0010011
       `define SF3_SLLI 3'b001 //SLLI 0000000 001  0010011 
       `define SF3_SRLI 3'b101 //SRLI 0000000 101  0010011 
       `define SF3_SRAI 3'b101 //SRAI 0100000 101  0010011 

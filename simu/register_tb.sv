@@ -6,7 +6,7 @@ module reg_tb;
     wire[31:0] r1,r2;
     wire[31:0] r1d,r2d;
     reg [31:0] r3;
-    reg we3;
+    reg [1:0]we3;
 
 
   always #10 clk = ~clk;
@@ -42,12 +42,12 @@ module reg_tb;
      for(integer i=0;i<32;i++) begin
      
         we3 <= 1'b1;
-        r3  <= r3+32'd2;
+        r3  <= ar3;
         #20;
         ar3 <= ar3+1'b1;
 
      end
-     we3 <= 1'b0;
+     we3 <= 2'b0;
      #40
     for(integer i=0;i<32;i++) begin
         ar1<=ar1+1'b1;

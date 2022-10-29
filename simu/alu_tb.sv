@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-`include "../src/define.v"
+`include "define.v"
 
 module alu_tb;
 
@@ -48,7 +48,7 @@ module alu_tb;
      if (dout != 32'hFFFFFFFb) begin
       $error("SRA failed");
      end
-     
+
      #100 $finish;
   end // initial begin
 

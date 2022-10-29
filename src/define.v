@@ -22,11 +22,16 @@
     `define IMM12 2'b01
     `define IMM_SHAMT 2'b11
 
-    `define ALU_REG = 1'b0
-    `define ALU_IMM = 1'b1
+    `define ALU_REG  1'b0
+    `define ALU_IMM  1'b1
 
-    `define MEM_WRITE_8 = 2'b01
-    `define MEM_WRITE_16 = 2'b10
-    `define MEM_WRITE_32 = 2'b11
+    `define MEM_WRITE_8   2'b01
+    `define MEM_WRITE_16  2'b10
+    `define MEM_WRITE_32  2'b11
+
+    `define RES_SRC_ALU    2'b00
+    `define RES_SRC_MEM    2'b01
+    `define RES_SRC_PCAUI  2'b10
+    `define RES_SRC_PCPL4  2'b11
 
 `endif

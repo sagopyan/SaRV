@@ -29,7 +29,7 @@ module control_unit(clk, rst, op,func3, func7,
 
     output reg  error;
 
-     always @* begin
+     always @(posedge clk) begin
 
     case(op)  
       `BRANCH    :       begin     
